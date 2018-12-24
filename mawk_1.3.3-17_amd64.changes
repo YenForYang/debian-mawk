@@ -1,0 +1,38 @@
+Format: 1.8
+Date: Fri, 23 Mar 2012 13:15:00 -0700
+Source: mawk
+Binary: mawk
+Built-For-Profiles: nobiarch nocheck nodoc
+Architecture: amd64
+Version: 1.3.3-17
+Distribution: unstable
+Urgency: low
+Maintainer: Steve Langasek <vorlon@debian.org>
+Changed-By: Steve Langasek <vorlon@debian.org>
+Description:
+ mawk       - a pattern scanning and text processing language
+Closes: 391051 665383
+Changes:
+ mawk (1.3.3-17) unstable; urgency=low
+ .
+   * debian/patches/cross-compile: fix the wrong invocation of AC_CHECK_PROG()
+     that breaks cross-compiler detection.
+   * debian/patches/21_memcpy-to-memmove: use memmove instead of memcpy in
+     FINgets.  Closes: #665383, LP: #955791.
+   * mark mawk Multi-Arch: foreign, to satisfy cross-build-dependencies.
+   * debian/patches/20_overlong-regexps: Do not crash if regexp is too
+     long for our buffer.  Thanks to Ian Jackson <iwj@ubuntu.com>,
+     Jonathan Nieder <jrnieder@gmail.com>.  Closes: #391051, LP: #23494.
+   * add autopkgtest/autodebtest support to run upstream tests.
+Checksums-Sha1:
+ b5d087a89c24d8590cece16bbba11fc12b298c01 143424 mawk-dbgsym_1.3.3-17_amd64.deb
+ 42c76e28971101a914d52d86026c9a47bc63d21a 5644 mawk_1.3.3-17_amd64.buildinfo
+ 529bc84bbedaac97449d7aab6af4287d857c504d 227732 mawk_1.3.3-17_amd64.deb
+Checksums-Sha256:
+ 38f9b9d0c51a8daa3bd43434b6a3770dbc4cf2d199011b066e8cb4ffbc7680cc 143424 mawk-dbgsym_1.3.3-17_amd64.deb
+ 7f02a1afd85d83cddd1abfa58ab974a31883e27a2042249cba4875e60753cbb8 5644 mawk_1.3.3-17_amd64.buildinfo
+ d9cbc90611350c45b42a3b90e5a2dfd35ab0feacb928fd324ccd4f0e1d029815 227732 mawk_1.3.3-17_amd64.deb
+Files:
+ 0c88875adb48d0cf9f71ca325689460f 143424 debug optional mawk-dbgsym_1.3.3-17_amd64.deb
+ b233f23323e9feff1767662735a377a0 5644 interpreters required mawk_1.3.3-17_amd64.buildinfo
+ 1431cb54ea08abc722d0910f64b52494 227732 interpreters required mawk_1.3.3-17_amd64.deb

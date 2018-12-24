@@ -1,0 +1,10 @@
+./examples/ct_length.awk
+./examples/decl.awk
+./examples/deps.awk
+./examples/eatc.awk
+./examples/gdecl.awk
+./examples/hcal
+./examples/hical
+./examples/nocomment.awk
+./examples/primes.awk
+./examples/qsort.awk
